@@ -12,9 +12,9 @@
 | 6    | {{nebula.name}}            | TCP  | 19559                         | Meta 服务的 HTTP 端口。                                      |
 | 7    | {{nebula.name}}            | TCP  | 19560                         | Meta 服务的 HTTP/2 端口。（3.x 后已弃用该端口）                     |
 | 8    | {{nebula.name}}            | TCP  | 9777                          | Storage 服务中，Drainer 服务占用端口（仅在企业版集群中暴露）。 |
-| 9    | {{nebula.name}}            | TCP  | 9778                          | Storage 服务中，Admin 服务占用端口。                         |
-| 10   | {{nebula.name}}            | TCP  | 9779                          | Storage 服务的 RPC 守护进程监听端口。（通常由 Graph 服务发起请求，用于执行数据存储相关的操作，例如读取、写入或删除数据。） |
-| 11   | {{nebula.name}}            | TCP  | 9780                          | Storage 服务之间的 Raft 通信端口。                           |
+| 9    | {{nebula.name}}            | TCP  | 9778                          | Storage 服务中，Admin 服务占用端口，该端口为 `storage_port` 配置项的值减一自动生成。                         |
+| 10   | {{nebula.name}}            | TCP  | 9779                          | Storage 服务的 RPC 守护进程监听端口，该端口为 `storage_port` 配置项。（通常由 Graph 服务发起请求，用于执行数据存储相关的操作，例如读取、写入或删除数据。） |
+| 11   | {{nebula.name}}            | TCP  | 9780                          | Storage 服务之间的 Raft 通信端口，该端口为 `storage_port` 配置项的值加一自动生成。                           |
 | 12   | {{nebula.name}}            | TCP  | 19779                         | Storage 服务的 HTTP 端口。                                   |
 | 13   | {{nebula.name}}            | TCP  | 19780                         | Storage 服务的 HTTP/2 端口。（3.x 后已弃用该端口）                  |
 | 14   | {{nebula.name}}            | TCP  | 8888                          | 备份和恢复功能的 Agent 服务端口。Agent 是集群中每台机器的一个守护进程，用于启停{{nebula.name}}服务和上传、下载备份文件。 |
