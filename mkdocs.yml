@@ -48,6 +48,8 @@ theme:
     - navigation.top
     - header.autohide
     - content.tabs.link
+    - content.action.edit
+    - content.code.copy
   language: 'zh'
 
 extra_css:
